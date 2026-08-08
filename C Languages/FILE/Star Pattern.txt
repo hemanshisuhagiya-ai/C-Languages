@@ -1,0 +1,1390 @@
+#include <stdio.h>
+
+int main() 
+{
+  int i,j;
+  // Outer loop
+  for (i = 1; i <=3; ++i)
+  {
+    // Inner loop
+      for (j = 1; j <= 5; ++j)
+      printf("*");
+      printf("\n");
+      
+  }
+ 
+  
+  return 0;
+}
+
+
+// output
+
+*****
+*****
+*****
+
+---------------------------------------------
+
+#include <stdio.h>
+
+int main() 
+{
+  int i,j;
+  // Outer loop
+  for (i = 1; i <=5; i++)
+  {
+    // Inner loop
+      for (j = 1; j <= 5; j++)
+      {
+       if(j <=i)
+      	// printf("*");
+        printf("%d ", j);
+       else
+       	printf(" ");
+       
+      }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+// output
+
+*    
+**   
+***  
+**** 
+*****
+
+------------------------------------------------------------------
+
+#include <stdio.h>
+
+int main() 
+{
+  int i,j;
+  // Outer loop
+  for (i=1;i<=5; i++)
+  {
+    // Inner loop
+     for (j=1;j<= 5;j++)
+      {
+       if(j >=6-i)
+      	    printf("*");
+       else
+       	    printf(" ");
+       
+      }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+// output
+
+    *
+   **
+  ***
+ ****
+*****
+
+----------------------------------------------------------------------
+
+#include <stdio.h>
+
+int main() 
+{
+  int i,j;
+  // Outer loop
+  for (i=1;i<=5; i++)
+  {
+    // Inner loop
+     for (j=1;j<= 5;j++)
+      {
+       if(j >=i)
+      	    printf("*");
+       else
+       	    printf(" ");
+       
+      }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+// output
+
+*****
+ ****
+  ***
+   **
+    *
+----------------------------------------------------------------------------------
+
+
+#include <stdio.h>
+
+int main() 
+{
+  int i,j;
+  // Outer loop
+  for (i=1;i<=5; i++)
+  {
+    // Inner loop
+     for (j=1;j<= 5;j++)
+      {
+       if(j <=6-i)
+      	    printf("*");
+       else
+       	    printf(" ");
+       
+      }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+
+// output
+*****
+**** 
+***  
+**   
+*
+----------------------------------------------------------------
+
+#include <stdio.h>
+
+int main() 
+{
+  int i,j;
+  // Outer loop
+  for (i=1;i<=5; i++)
+  {
+    // Inner loop
+     for (j=1;j<= 9;j++)
+      {
+       if(j>=6-i && j<=4+i)
+      	    printf("*");
+       else
+       	    printf(" ");
+       
+      }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+// output
+
+    *    
+   ***   
+  *****  
+ ******* 
+*********
+----------------------------------------------------------------------------------
+
+#include <stdio.h>
+
+int main() 
+{
+  int i,j,k;
+  // Outer loop
+  for (i=1;i<=5; i++)
+  {
+       k = 1;
+    // Inner loop
+     for (j=1;j<=9;j++)
+      {
+       if(j>=6-i && j<=4+i && k)
+       {
+      	    printf("*");
+      	    k = 0;
+       }
+       else 
+       {
+       	    printf(" ");
+       	    k = 1;
+       }
+       
+      }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+// output
+
+    *    
+   * *   
+  * * *  
+ * * * * 
+* * * * *
+
+---------------------------
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=9;j++)
+        {
+            if((i==1 && j==5) ||
+            (i==2 && (j==4 || j==6)) || 
+            (i==3 && (j==3 || j==7)) ||
+            (i==4 && (j==2 || j==8)) || 
+            (i==5 && (j==1 || j==3 || j==5 || j==7 || j==9)))
+            {
+                printf("*");
+            }
+             else
+            {
+                 printf(" ");
+            }
+        }     
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+//output
+
+    *    
+   * *   
+  *   *  
+ *     * 
+* * * * *
+
+
+------------------------------------------------
+
+#include <stdio.h>
+
+int main() 
+{
+  int i,j,k;
+  // Outer loop
+  for (i=1;i<=4; i++)
+  {
+        k = 1;
+    // Inner loop
+     for (j=1;j<=7;j++)
+      {
+       if(j>=5-i && j<=3+i)
+       {
+      
+      	    printf("%d", k);
+      	    K++;
+
+            // printf("%d", k);
+      	   // j<4?k++:k--;
+
+      	    
+       }    
+       else
+       	    printf(" ");
+       
+      }
+      printf("\n");
+      
+  }
+   
+   return 0;
+      
+ }
+
+// output
+
+   4   
+  345  
+ 23456 
+1234567
+------------------------------------------------------------------
+
+#include <stdio.h>
+
+int main() 
+{
+    int i, j;
+    
+    // Outer loop for rows
+    for (i = 1; i <= 4; i++) 
+    {
+        // Inner loop for columns
+        for (j = 1; j <= 7; j++) 
+        {
+            // Condition to print the numbers in a pyramid shape
+            if (j >= 5 - i && j <= 3 + i) 
+            {
+                // Print the column index 'j' directly
+                printf("%d", j);
+            }    
+            else 
+            {
+                // Print a space where the condition is false
+                printf(" ");
+            }
+        }
+        // Move to the next line after each row
+        printf("\n");
+    }
+   
+    return 0;
+}
+
+--------------------------------------------------------------
+
+#include <stdio.h>
+
+int main() 
+{
+  int i,j;
+  // Outer loop
+  for (i=1;i<=5; i++)
+  {
+    // Inner loop
+     for (j=1;j<= 9;j++)
+      {
+       if(j<=6-i || j>=4+i)
+      	    printf("*");
+       else
+       	    printf(" ");
+       
+      }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+// output
+
+*********
+**** ****
+***   ***
+**     **
+*       *
+----------------------------------------------------------------------------
+
+#include <stdio.h>
+
+int main() {
+    int n = 5; // Change this value to adjust the number of rows
+    int i, j;
+
+    for (i = 1; i <= n; i++) 
+    {
+        for (j = 1; j <= i; j++) 
+        {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+
+-------------------------------------------------------------------------------
+
+#include <stdio.h>
+
+int main() 
+{
+  int i,j,k;
+  // Outer loop
+  for (i=1;i<=4; i++)
+  {
+        k = 1;
+    // Inner loop
+     for (j=1;j<=7;j++)
+      {
+       if(j>=5-i && j<=3+i)
+       {
+      
+      	   printf("%d", k);
+      	   //k++;
+      	   //j<4?k++:k--;
+
+      	    
+       }    
+       else
+       	    printf(" ");
+       
+      }
+      printf("\n");
+      
+  }
+   
+   return 0;
+      
+ }
+
+   1   
+  121  
+ 12321 
+1234321
+
+-------------------------------------------------------------------------
+
+#include <stdio.h>
+
+int main() 
+{
+  int i,j;
+  char k;
+  // Outer loop
+  for (i=1;i<=4; i++)
+  {
+    // Inner loop
+     k = 'A';
+     for (j=1;j<= 7;j++)
+      {
+       if(j<=5-i || j>=3+i)
+       {   
+        //   printf("*");
+      	 //  printf("%c", k);
+      	 //  k++;
+
+           printf("%c", k);
+      	   j<4?k++:k--; 
+       }
+       else
+       	    printf(" ");
+       
+      }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+
+ABCDCBA
+ABC DCB
+AB   CB
+A     B
+
+-----------------------------------------------------------
+
+#include <stdio.h>
+
+int main() 
+{
+  int i,j;
+  char k;
+  // Outer loop
+  for (i=1;i<=4; i++)
+  {
+    // Inner loop
+     k = 'A';
+     for (j=1;j<= 7;j++)
+      {
+       if(j<=5-i || j>=3+i)
+       {   
+        //   printf("*");
+      	 //  printf("%c", k);
+      	 //  k++;
+
+           printf("%c", k);
+      	   j<4?k++:k--;
+
+      	    
+       }
+       else 
+       {
+       	    printf(" ");
+       	    if(j==4)
+       	    {
+       	        k--;
+       	    }
+       }
+       
+      }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+----------------------------------------------------------------
+
+#include <stdio.h>
+
+int main() 
+{
+  int i,j,k = 0;
+  // Outer loop
+  for (i=1;i<=7; i++)
+  {
+    // Inner loop
+     i<=4?k++:k--;
+     for (j=1;j<=7;j++)
+      {
+
+       if(j>= 5-k && j<=3+k)
+      	    printf("*");
+       else
+       	    printf(" ");
+           }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+
+   *   
+  ***  
+ ***** 
+*******
+ ***** 
+  ***  
+   * 
+
+------------------------------------------------------------------
+
+#include <stdio.h>
+
+int main() 
+{
+  int i,j,k=0;
+  // Outer loop
+  for (i=1;i<=7; i++)
+  {
+    // Inner loop
+    
+     i<=4?k++:k--;
+     for (j=1;j<=4;j++)
+      {
+       if(j<=k)
+      	    printf("*");
+       else
+       	    printf(" ");
+       
+      }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+
+*   
+**  
+*** 
+****
+*** 
+**  
+* 
+
+
+------------------------------------------------------------------
+
+int main() 
+{
+  int i,j,k;
+  // Outer loop
+  for (i=1;i<=4; i++)
+  {
+      k = i;
+    for (j=1;j<=7;j++)
+      {
+       if(j>= 5-i && j<=3+i)
+      	    printf("%d" , k);
+            //j<4?k++:k--;
+      	 
+       else
+       	    printf(" ");
+       
+      }
+      printf("\n");
+     }
+ 
+  return 0;
+}
+
+   1   
+  222  
+ 33333 
+4444444
+
+
+   1   
+  232  
+ 34543 
+4567654
+
+--------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main() 
+{
+  int i,j,k;
+  // Outer loop
+  for (i=1;i<=7; i++)
+  {
+    k = i;
+    for (j=1;j<=7;j++)
+      {
+       if(j>= 8-i)
+      	    printf("%d" , k);
+            //j<4?k++:k--;
+      	 
+       else
+       	    printf(" ");
+       
+      }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+      1
+     22
+    333
+   4444
+  55555
+ 666666
+7777777
+
+
+1111111
+222222 
+33333  
+4444   
+555    
+66     
+7
+
+------------------------------------------------------------
+#include <stdio.h>
+int main() 
+{
+  int i,j,k;
+  // Outer loop
+  for (i=1;i<=7; i++)
+  {
+    k = 7-i;
+    for (j=1;j<=7;j++)
+      {
+       if(j<= 8-i)
+       {
+      	    printf("%d",k);
+      	    k--;
+            //j<4?k++:k--;
+       }
+       else
+       	    printf(" ");    
+  }
+    
+    printf("\n");
+}
+}
+
+
+6543210
+543210 
+43210  
+3210   
+210    
+10     
+0 
+
+------------------------------------------------------------------
+
+int main() 
+{
+  int i,j,k;
+  // Outer loop
+  for (i=1;i<=4; i++)
+  {
+      k = i;
+    for (j=1;j<=7;j++)
+      {
+       if(j>= i && j<=8-i)
+      	   printf("*");
+      	 
+       else
+       	    printf(" ");
+       
+      }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+
+*******
+ ***** 
+  ***  
+   *
+-------------------------------------------------------------
+
+
+int main() 
+{
+  int i,j ,r;
+  
+  printf("Enter your row number : - ");
+  scanf("%d" , &r);
+  // Outer loop
+  for (i=1;i<=r; i++)
+  {
+    
+    for (j=1;j<=2*r-1;j++)
+      {
+       if(j>= i && j<=2*r-i)
+      	   printf("*");
+      	 
+       else
+       	    printf(" ");
+       
+      }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+*******************
+ ***************** 
+  ***************  
+   *************   
+    ***********    
+     *********     
+      *******      
+       *****       
+        ***        
+         * 
+
+----------------------------------------------------------
+
+int main() 
+{
+  int i,j,k = 0;
+  // Outer loop
+  for (i=1;i<=9; i++)
+  {
+    i<=5?k++:k--;
+    for (j=1;j<=9;j++)
+      {
+       if(j<=6-k || j>=4+k)
+      	   printf("*");
+      	 
+       else
+       	    printf(" ");
+       
+      }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+*********
+**** ****
+***   ***
+**     **
+*       *
+**     **
+***   ***
+**** ****
+*********
+
+------------------------------------------------------------------
+
+
+int main() 
+{
+  int i,j;
+  char k;
+  // Outer loop
+  for (i=1;i<=4; i++)
+  {
+      k = 'A';
+    for (j=1;j<=7;j++)
+      {
+       if(j>=5-i && j<=3+i)
+       {
+      	 //  printf("*");
+      	 //  printf("A");
+      	 printf("%c",k);
+      	 //k++;
+      	 j<4?k++:k--;
+       }
+       else
+       	    printf(" ");
+       
+      }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+   A   
+  ABA  
+ ABCBA 
+ABCDCBA
+
+-------------------------------------------------------------------------------
+
+  int main() 
+{
+  int i,j,k = 0;
+  // Outer loop
+  for (i=1;i<=7; i++)
+  {
+    i<=4?k++:k--;
+    for (j=1;j<=7;j++)
+      {
+       if(j>=5-k && j<= 3+k)
+      	   printf("*");
+      	 
+       else
+       	    printf(" ");
+       
+      }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+
+
+  
+   *   
+  ***  
+ ***** 
+*******
+ ***** 
+  ***  
+   *
+
+
++--------------------------------------------------------
+
+#include <stdio.h>
+
+int main() {
+    int n = 5; // Number of rows in the pattern
+
+    for (int i = 1; i <= n; i++) 
+    {
+        for (int j = 1; j <= i; j++) 
+        {   
+            // For every odd column print 1
+            if (j % 2 == 1) 
+            {
+                printf("1 ");
+            } else 
+            {
+                printf("0 ");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+1 
+1 0 
+1 0 1 
+1 0 1 0 
+1 0 1 0 1 
+
+0 
+0 1 
+0 1 0 
+0 1 0 1 
+0 1 0 1 0 
+
+#include <stdio.h>
+
+int main() 
+{
+    
+    for (int i = 1; i <= 5; i++) 
+    {   
+        int k = 1;
+        
+        for (int j = 1; j <= 5; j++) 
+        {   
+             
+            // For every odd column print 1
+            if (j<=i)
+            {
+                printf("%d",k);
+                k = 1-k;
+            } 
+            else 
+                printf(" ");
+            
+        }
+        printf("\n");
+    }
+
+    return 0;
+    
+}
+
+
+-----------------------------------------------------------------------------
+
+#include <stdio.h>
+
+int main() {
+    int rows = 5; // Change this to adjust the number of rows
+
+    for (int i = 1; i <= rows; i++) 
+    {
+        for (int j = 1; j <= i; j++) 
+           {
+            if (j % 2 == 1) 
+            {
+                printf(" | ");
+            } 
+            else 
+            {
+                printf(" - ");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+- 
+- | 
+- | - 
+- | - | 
+- | - | - 
+
+------------------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main() 
+{
+  int i,j;
+  // Outer loop
+  for (i = 1; i <=5; ++i)
+  {
+    // Inner loop
+      for (j = 5; j >= 6-i; j--)
+      {
+      	// printf("*");
+        printf("%d ", j);
+      }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+
+5 
+5 4 
+5 4 3 
+5 4 3 2 
+5 4 3 2 1 
+
+
+#include <stdio.h>
+
+int main() 
+{
+  int i,j,k;
+  // Outer loop
+  for (i=1;i<=5; i++)
+  {
+    k = 5;
+    for (j=1;j<=5;j++)
+      {
+       if(j<=i)
+       {
+      	    printf("%d",k);
+      	    //   k--;
+           j<5?k--:k++;
+       }
+       else
+       	    printf(" ");
+       
+  }
+    
+    printf("\n");
+ 
+}
+
+}
+
+-------------------------------------------------------
+
+#include <stdio.h>
+
+int main() 
+{
+  int i,j;
+  // Outer loop
+  for (i = 1; i <=5; ++i)
+  {
+    // Inner loop
+      for (j = 1; j <= i; j++)
+      {
+      	// printf("*");
+        printf("%d ", j);
+      }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5
+
+---------------------------------------------------------------
+
+#include <stdio.h>
+
+int main() 
+{
+  int i,j;
+  // Outer loop
+  for (i = 1; i <=5; ++i)
+  {
+    // Inner loop
+      for (j = 6-i; j <= 5; j++)
+      {
+      	// printf("*");
+        printf("%d ", j);
+      }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+5 
+4 5 
+3 4 5 
+2 3 4 5 
+1 2 3 4 5 
+------------------------------------------------------------
+int main() 
+{
+  int i,j,k;
+  // Outer loop
+  for (i=1;i<=5; i++)
+  {
+    // Inner loop
+    
+    for(k=1;k<=5-i; k++)
+    {
+        
+       printf(" ");
+    }
+    
+    for (j=1;j<=i;j++)
+    {
+      printf("*");
+    }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+-------------------------------------------------------------
+#include <stdio.h>
+
+int main() 
+{
+  int i,j;
+  // Outer loop
+  for (i = 1; i <=7; ++i)
+  {
+    // Inner loop
+      for (j = 1; j <= 7; ++j)
+      {
+        if((i==1 || i== 7 || j==1 || j ==7) ||(i>=3 &&i<=5 && j>=3 && j<=5) && (i==3 || i==5 || j==3 ||j ==5)) 
+            printf("*");
+        else
+            printf(" ");
+            
+        
+      }
+            
+    
+    printf("\n");
+  }
+ 
+  
+  return 0;
+}
+
+
+*******
+*     *
+* *** *
+* * * *
+* *** *
+*     *
+*******
+
+-------------------------------------------------------------------------------------------------------
+
+#include <stdio.h>
+
+int main() {
+    int n = 5; // Number of rows
+
+    for (int i = 1; i <= n; i++) 
+    {
+        // Print spaces
+        for (int j = 1; j <= n - i; j++) 
+        {
+            printf("   ");
+        }
+
+        // Print numbers in descending order
+        for (int k = n; k >= n - i + 1; k--) 
+        {
+            printf("%d  ", k);
+            printf("%d  ", i);
+
+
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+
+            5  
+         5  4  
+      5  4  3  
+   5  4  3  2  
+5  4  3  2  1 
+-----------------------------------------------------------------
+#include <stdio.h>
+
+int main() 
+{
+  int i,j,k;
+  // Outer loop
+  for (i=1;i<=5; i++)
+  {
+    k = 5;
+    for (j=1;j<=5;j++)
+      {
+       if(j>= 6-i)
+       {
+      	    printf("%d" ,k);
+      	    k--;
+            //j<4?k++:k--;
+       } 
+       else
+       	    printf(" ");
+       
+      }
+      printf("\n");
+      
+  }
+ 
+  return 0;
+}
+
+    5
+   54
+  543
+ 5432
+54321
+
+    5
+   45
+  345
+ 2345
+12345
+
+-----------------------------------------------------------------------------------------------------------
+-
+
+| -
+
+- | -
+
+| - | -
+
+- | - | -
+
+-------------------------------------------------------------------
+#include <stdio.h>
+
+int main() {
+    int i, j, k=1;
+
+    for(i = 1; i <= 10; i++)
+    {
+       
+       
+        for(j = 1; j <= 10; j++)
+        {
+            if (j <= 6 - k || j >= 5+k)
+            {
+                if(j<=5)
+                {
+                    printf("%d",j);
+                }
+       
+                else
+                {
+                    printf("%d",11-j);
+                }  
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        printf("\n");
+       
+        if(i<5)
+        {
+            k++;
+        }
+       
+        if(i>5)
+        {
+            k--;
+        }
+    }
+
+    return 0;
+}
+
+---------------------------------------------------------------
+
+
+#include<stdio.h>
+int main(){
+	
+	int i,j;
+	
+	for(i=1; i<=5; i++){						//loop for raw
+		for(j=1; j<=10; j++){					//loop for column
+			if(j<=i || j>=11-i)
+                       {				// condition for outer print
+				(j>5)?printf("%d",11-j):printf("%d",j);			//printing the numbers
+			}
+			else{
+				printf(" ");					//print space
+			}
+		}
+		printf("\n");							//new line 
+	}
+	
+	return 0;
+}
+
+
+1        1
+12      21
+123    321
+1234  4321
+1234554321
+
+
+
+
+---------------------------------------------------------
+
+#include<stdio.h>
+void main()
+{
+    int i,j,n;
+    printf("N = ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=n;j++)
+        {
+            if(i==(n/2+1)||j==(n/2+1)||(i<=(n/2)&&j==1)||(i>(n/2)&&j==n)||(j<=(n/2)&&i==n)||(j>(n/2)&&i==1))
+            {
+                printf("*");
+
+
+
+            }
+            else
+            {
+                    printf(" ");
+            }
+            printf(" ");
+        }
+        printf("\n");
+}
+}
+
+N = 11
+*         * * * * * * 
+*         *           
+*         *           
+*         *           
+*         *           
+* * * * * * * * * * * 
+          *         * 
+          *         * 
+          *         * 
+          *         * 
+* * * * * *         * 
+
+
+

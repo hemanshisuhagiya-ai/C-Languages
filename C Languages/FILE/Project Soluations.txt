@@ -1,0 +1,2291 @@
+Wap in c  to Swap two variables (with sing third variable).
+
+#include <stdio.h>
+
+int main() {
+    int a, b, temp;
+
+    // Input two numbers
+    printf("Enter two numbers:\n");
+    scanf("%d %d", &a, &b);
+
+    // Swap the values of a and b using a temporary variable
+    temp = a;
+    a = b;
+    b = temp;
+
+    // Display the swapped values
+    printf("After swapping:\n");
+    printf("a = %d\n", a);
+    printf("b = %d\n", b);
+
+    return 0;
+}
+
+
+---------------------------------------------------
+
+WAP in c  Swap two variables (without using third variable)
+
+#include<stdio.h>  
+ int main()    
+{    
+int a=10, b=20;      
+printf("Before swap a=%d b=%d",a,b);      
+a=a+b;//a=30 (10+20)    
+b=a-b;//b=10 (30-20)    
+a=a-b;//a=20 (30-10)    
+printf("\nAfter swap a=%d b=%d",a,b);    
+return 0;  
+}
+-----------------------------------------------------------
+# convert temperature from degree celsius to fahrenheit
+
+Input temperature in Celsius from user. Store it in some variable say celsius.
+Apply formula to convert the temperature to Fahrenheit i.e. fahrenheit = (celsius * 9 / 5) + 32.
+Print the value of fahrenheit.
+
+
+#include <stdio.h>
+
+int main()
+{
+    float celsius, fahrenheit;
+
+    /* Input temperature in celsius */
+    printf("Enter temperature in Celsius: ");
+    scanf("%f", &celsius);
+
+    /* celsius to fahrenheit conversion formula */
+    fahrenheit = (celsius * 9 / 5) + 32;
+
+    printf("%.2f Celsius = %.2f Fahrenheit", celsius, fahrenheit);
+
+    return 0;
+}
+
+---------------------------------------------------------------------------
+
+Gross Salary = Basic + HRA + DA + Allow – PF
+Here, HRA = 20% of Basic 
+DA = 50% of basic 
+Allow = 1700 if grade = ‘A’ 
+Allow = 1500 if grade = ‘B’ 
+Allow = 1300 if grade = ‘C’ 
+PF = 11% of basic
+
+#include < stdio.h >  
+  
+int main()  
+{  
+    float bs, gs, da, hra;  
+  
+    printf("Enter basic salary\n");  
+    scanf("%f", &bs);  
+  
+    if( bs < 5000 )  
+    {  
+        hra = bs * 10 / 100;  
+        da  = bs * 90 / 100;  
+    }  
+    else  
+    {  
+        hra = 600;  
+        da  = bs * 95 / 100;  
+    }  
+  
+    gs = bs + da + hra;  
+  
+    printf("Gross Salary is Rs %f\n", gs);  
+  
+    return 0;  
+}
+
+-------------------------------------------------------------------
+
+// C program to illustrate  \a escape sequence
+#include <stdio.h>
+ 
+int main(void)
+{
+    // output may depend upon the compiler
+    printf("\t\t*\t\t*\t\t\t\t\t\t\t\n");
+    printf("\t*\t\t*\t\t\t\t\t\t\t\t\n");
+    printf("*\t\t*\t\t\t\t\t\t\t\t\t\n");
+    printf("\t*\t\t*\t\t\t\t\t\t\t\t\n");
+    printf("\t\t*\t\t*\t\t\t\t\t\t\t\n");
+  
+    
+    
+    return (0);
+}
+
+
+
+---------------------------------------------------------------
+
+#include <stdio.h>
+
+int main() {
+    float baseSalary, hraPercent, daPercent, taPercent;
+    float grossSalary;
+
+    // Input the base salary and percentage of HRA, DA, and TA
+    printf("Enter the base salary: ");
+    scanf("%f", &baseSalary);
+
+    printf("Enter the percentage of HRA: ");
+    scanf("%f", &hraPercent);
+
+    printf("Enter the percentage of DA: ");
+    scanf("%f", &daPercent);
+
+    printf("Enter the percentage of TA: ");
+    scanf("%f", &taPercent);
+
+    // Calculate the gross salary
+    float hra = (hraPercent / 100) * baseSalary;
+    float da = (daPercent / 100) * baseSalary;
+    float ta = (taPercent / 100) * baseSalary;
+
+    grossSalary = baseSalary + hra + da + ta;
+
+    // Display the gross salary
+    printf("Gross Salary: %.2f RS\n", grossSalary);
+
+    return 0;
+}
+
+-------------------------------------------------
+
+ int  main()
+{
+// practical 1 :
+
+    char ch;
+
+    printf("Enter a character: ");
+    scanf(" %c", &ch);
+
+    if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) '
+     {
+        printf("%c is an alphabet.\n", ch);
+    } 
+    else if (ch >= '0' && ch <= '9') 
+    {
+        printf("%c is a digit.\n", ch);
+    } 
+    else 
+    {
+        printf("%c is a special character.\n", ch);
+    }
+	
+    return 0;
+}
+
+-------------------------------------------------------------------
+
+#include <stdio.h>
+
+int main() {
+    int number;
+
+    // Prompt the user to enter a number
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    // Check if the number is even or odd using the ternary operator
+    (number % 2 == 0) ? printf("%d is even.\n", number) : printf("%d is odd.\n");
+
+    return 0;
+}
+
+--------------------------------------------------
+#include <stdio.h>
+
+int main() {
+    float unitCharges, totalBill;
+    
+    // Prompt the user to enter the electricity unit charges
+    printf("Enter electricity unit charges: ");
+    scanf("%f", &unitCharges);
+    
+    if (unitCharges <= 50) 
+    {
+        totalBill = unitCharges * 0.50;
+    } 
+    else if (unitCharges <= 150) 
+    {
+        totalBill = (50 * 0.50) + ((unitCharges - 50) * 0.75);
+    } 
+    else if (unitCharges <= 250) 
+    {
+ 	totalBill = (50 * 0.50) + (100 * 0.75) + ((unitCharges - 150) * 1.20);
+    } 
+    else 
+    {
+        totalBill = (50 * 0.50) + (100 * 0.75) + (100 * 1.20) + ((unitCharges - 250) * 1.50);
+    }
+    
+    // Add a 20% surcharge
+    totalBill += (0.20 * totalBill);
+    
+    printf("Total electricity bill: Rs. %.2f\n", totalBill);
+    
+    return 0;
+}
+-------------------------------------------------------------------
+# write program in c find area of circle
+
+#include <stdio.h>
+
+int main() {
+    double radius, area;
+
+    // Prompt the user to enter the radius
+    printf("Enter the radius of the circle: ");
+    scanf("%lf", &radius);
+
+    // Calculate the area
+    area = 3.14159265359 * radius * radius;
+
+    // Display the result
+    printf("The area of the circle with radius %.2f is %.2f\n", radius, area);
+
+    return 0;
+}
+--------------------------------------------------------------------------------------------------
+
+
+# Area Of Square.
+
+#include <stdio.h>
+
+int main() {
+    double side, area;
+
+    // Prompt the user to enter the side length
+    printf("Enter the side length of the square: ");
+    scanf("%lf", &side);
+
+    // Calculate the area
+    area = side * side;
+
+    // Display the result
+    printf("The area of the square with side length %.2f is %.2f\n", side, area);
+
+    return 0;
+}
+
+
+------------------------------------------------------------------------------------------------
+Area of Rectangle
+
+#include <stdio.h>
+
+int main() {
+    double length, width, area;
+
+    // Prompt the user to enter the length and width
+    printf("Enter the length of the rectangle: ");
+    scanf("%lf", &length);
+    
+    printf("Enter the width of the rectangle: ");
+    scanf("%lf", &width);
+
+    // Calculate the area
+    area = length * width;
+
+    // Display the result
+    printf("The area of the rectangle with length %.2f and width %.2f is %.2f\n", length, width, area);
+
+    return 0;
+}
+
+----------------------------------------------------------------------------------------------------------------
+
+ Area of triangle
+
+#include <stdio.h>
+
+int main() {
+    double 5, 10, area;
+
+    // Prompt the user to enter the base and height
+    printf("Enter the base of the triangle: ");
+    scanf("%lf", &base);
+    
+    printf("Enter the height of the triangle: ");
+    scanf("%lf", &height);
+
+    // Calculate the area
+    area = 0.5 * base * height;
+
+    // Display the result
+    printf("The area of the triangle with base %.2f and height %.2f is %.2f\n", base, height, area);
+
+    return 0;
+}
+
+
+---------------------------------------------------------------------------------------------------------------
+Simple Interest
+
+#include <stdio.h>
+
+int main() {
+    double principal, rate, time, simple_interest;
+
+    // Prompt the user to enter the principal amount, rate, and time
+    printf("Enter the principal amount: ");
+    scanf("%lf", &principal);
+
+    printf("Enter the rate of interest (in percentage): ");
+    scanf("%lf", &rate);
+
+    printf("Enter the time (in years): ");
+    scanf("%lf", &time);
+
+    // Calculate simple interest
+    simple_interest = (principal * rate * time) / 100.0;
+
+    // Display the result
+    printf("Simple Interest is: %.2f\n", simple_interest);
+
+    return 0;
+}
+
+
+-----------------------------------------------------------------------------------------------
+
+//Perimeter of the Circle in c
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double radius, circumference;
+
+    // Prompt the user to enter the radius
+    printf("Enter the radius of the circle: ");
+    scanf("%lf", &radius);
+
+    // Calculate the circumference
+    circumference = 2 * M_PI * radius;
+
+    // Display the result
+    printf("The circumference of the circle with radius %.2f is %.2f\n", radius, circumference);
+
+    return 0;
+}
+
+------------------------------------
+(x+y)2.
+
+#include <stdio.h>
+
+int main() {
+    double x, y, result;
+
+    // Prompt the user to enter values for x and y
+    printf("Enter the value of x: ");
+    scanf("%lf", &x);
+
+    printf("Enter the value of y: ");
+    scanf("%lf", &y);
+
+    // Calculate the square of the sum (x + y)^2
+    result = (x + y) * (x + y);
+
+    // Display the result
+    printf("The square of the sum (%.2f + %.2f)^2 is %.2f\n", x, y, result);
+
+    return 0;
+}
+
+---------------------------------------------------------------------
+
+
+#include <stdio.h>
+
+int main() {
+    double x, y, result;
+
+    // Prompt the user to enter values for x and y
+    printf("Enter the value of x: ");
+    scanf("%lf", &x);
+
+    printf("Enter the value of y: ");
+    scanf("%lf", &y);
+
+    // Calculate the square of (x - y)
+    result = (x - y) * (x - y);
+
+    // Display the result
+    printf("The square of (x - y) is %.2f\n", result);
+
+    return 0;
+}
+
+-----------------------------------------------------------------------------
+
+
+#include <stdio.h>
+#include <math.h>`
+
+int main() {
+    double x, y, result;
+
+    // Prompt the user to enter the values of x and y
+    printf("Enter the value of x: ");
+    scanf("%lf", &x);
+
+    printf("Enter the value of y: ");
+    scanf("%lf", &y);
+
+    // Calculate (x + y)^3
+    result = pow(x + y, 3);
+
+    // Display the result
+    printf("(%lf + %lf)^3 = %lf\n", x, y, result);
+
+    return 0;
+}
+
+-------------------------------------------------------------------------------------
+
+
+#include <stdio.h>
+
+int main() {
+    double x, y, z;
+    
+    // Prompt the user to enter the values of x, y, and z
+    printf("Enter the value of x: ");
+    scanf("%lf", &x);
+    
+    printf("Enter the value of y: ");
+    scanf("%lf", &y);
+    
+    printf("Enter the value of z: ");
+    scanf("%lf", &z);
+    
+    // Calculate the expanded form of (x + y + z)^3
+    double result = x*x*x + 3*x*x*y + 3*x*y*y + y*y*y + 3*x*x*z + 3*x*y*z + 3*y*y*z + z*z*z;
+    
+    // Display the result
+    printf("(x + y + z)^3 = %.2f\n", result);
+    
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    double x, y, z, result;
+
+    // Prompt the user to enter the values of x, y, and z
+    printf("Enter the value of x: ");
+    scanf("%lf", &x);
+
+    printf("Enter the value of y: ");
+    scanf("%lf", &y);
+
+    printf("Enter the value of z: ");
+    scanf("%lf", &z);
+
+    // Calculate (x + y + z)^3
+    result = (x + y + z) * (x + y + z) * (x + y + z);
+
+    // Display the result
+    printf("(%f + %f + %f)^3 = %f\n", x, y, z, result);
+
+    return 0;
+}
+
+
+---------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main() {
+    double x, y, z, result;
+
+    // Prompt the user to enter values for x, y, and z
+    printf("Enter the value of x: ");
+    scanf("%lf", &x);
+    
+    printf("Enter the value of y: ");
+    scanf("%lf", &y);
+
+    printf("Enter the value of z: ");
+    scanf("%lf", &z);
+
+    // Calculate the square of the expression (x + y + z)^2
+    result = (x + y + z) * (x + y + z);
+
+    // Display the result
+    printf("The square of (x + y + z)^2 is %.2f\n", result);
+
+    return 0;
+}
+
+--------------------------------------------------------------------
+
+1. Print all alphabets from 'a' to 'z' using a do-while loop:
+
+#include <stdio.h>
+
+int main() 
+    {
+    char ch = 'a';
+    
+    do 
+      {
+        printf("%c ", ch);
+        ch++;
+      } 
+      while (ch <= 'z');
+    
+    return 0;
+}
+
+----------------------------------------------------------------------
+2. Print the multiplication table of any number:
+
+#include <stdio.h>
+
+int main() {
+    int num, i;
+    
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    
+    for (i = 1; i <= 10; i++) 
+    {
+        printf("%d x %d = %d\n", num, i, num * i);
+    }
+    
+    return 0;
+}
+
+---------------------------------------------------------------------------
+3. Count the number of digits in a number:
+
+#include <stdio.h>
+
+int main() 
+{
+    int num, count = 0;
+    
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    
+    while (num != 0) 
+    {
+        num /= 10;
+        count++;
+    }
+    
+    printf("Number of digits: %d\n", count);
+    
+    return 0;
+}
+
+--------------------------------------------------------------------------
+#include <stdio.h>
+
+int main() {
+    int num, count = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    for(int i = 1; i<=num; i++)
+    {
+        if(num%i == 0)
+        {
+            count++;
+        }
+    }
+    if(count == 2)
+    {
+        printf("Prime number");
+    }
+    else
+    {
+        printf("Not a Prime Number");
+    }
+
+    return 0;
+}
+
+----------------------------------------------------------------- 
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    while (num > 9) 
+    {
+        int sum = 0;
+        while (num > 0) 
+        {
+            sum += num % 10;
+            num /= 10;
+        }
+        num = sum;
+    }
+
+    if (num == 1) 
+    {
+        printf("magic number.\n");
+    } 
+    else 
+    {
+        printf("not a magic number.\n");
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main()
+{
+    long long num;
+    int count = 0;
+
+    /* Input number from user */
+    printf("Enter any number: ");
+    scanf("%lld", &num);
+
+    /* Run loop till num is greater than 0 */
+    do
+    {
+        /* Increment digit count */
+        count++;
+
+        /* Remove last digit of 'num' */
+        num /= 10;
+    } while(num != 0);
+
+    printf("Total digits: %d", count);
+
+    return 0;
+}
+-------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <math.h> /* Used for log10() */
+
+int main()
+{
+    long long num;
+    int count = 0;
+
+    /* Input number from user */
+    printf("Enter any number: ");
+    scanf("%lld", &num);
+
+    /* Calculate total digits */
+    count = (num == 0) ? 1  : (log10(num) + 1);
+
+    printf("Total digits: %d", count);
+
+    return 0;
+}
+
+-------------------------------------------------------------------------------
+4. Find the sum of the first and last digit of a number:
+
+#include <stdio.h>
+
+int main() {
+    int num, firstDigit, lastDigit, sum;
+    
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    
+    lastDigit = num % 10;
+    
+    while (num >= 10) 
+    {
+        num /= 10;
+    }
+    
+    firstDigit = num;
+    sum = firstDigit + lastDigit;
+    
+    printf("Sum of first and last digits: %d\n", sum);
+    
+    return 0;
+}
+
+------------------------------------------------------------------------------
+5. Enter a number, print its reverse, and check if it's a palindrome:
+
+
+#include <stdio.h>
+
+int main() 
+{
+    int num, reversed = 0, original, remainder;
+    
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    
+    original = num;
+    
+    while (num != 0) 
+   {
+        remainder = num % 10;
+        reversed = reversed * 10 + remainder;
+        num /= 10;
+    }
+    
+    printf("Reverse: %d\n", reversed);
+    
+    if (original == reversed) 
+    {
+        printf("The number is a palindrome.\n");
+    } 
+    else 
+    {
+        printf("The number is not a palindrome.\n");
+    }
+    
+    return 0;
+}
+
+------------------------------------------------------------
+6. Calculate the factorial of a number:
+
+#include <stdio.h>
+
+int main() {
+    int num, i;
+    long long factorial = 1;
+    
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    
+    for (i = 1; i <= num; i++) 
+    {
+        factorial *= i;
+    }
+    
+    printf("Factorial of %d = %lld\n", num, factorial);
+    
+    return 0;
+}
+
+-----------------------------------------------------------
+7. Print the Fibonacci series:
+
+#include <stdio.h>
+
+int main() {
+    int n, first = 0, second = 1, next, i;
+    
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+    
+    printf("Fibonacci Series: ");
+    
+    for (i = 0; i < n; i++) 
+        {
+        if (i <= 1) 
+        {
+            next = i;
+        } 
+        else 
+        {
+            next = first + second;
+            first = second;
+            second = next;
+        }
+        printf("%d ", next);
+    }
+    
+    return 0;
+}
+-----------------------------------------------------------
+
+8. Check if a number is prime or not:
+
+
+#include <stdio.h>
+
+int isPrime(int n) 
+    {
+    if (n <= 1) 
+    {
+        return 0;
+    }
+    
+    for (int i = 2; i * i <= n; i++) 
+    {
+        if (n % i == 0) 
+        {
+            return 0;
+        }
+    }
+    
+    return 1;
+}
+
+int main() {
+    int num;
+    
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    
+    if (isPrime(num)) 
+    {
+        printf("%d is a prime number.\n");
+    } 
+   else 
+   {
+        printf("%d is not a prime number.\n");
+    }
+    
+    return 0;
+}
+
+------------------------------------------------------------------
+9. Check if a number is a magic number or not:
+
+A magic number is a number in which the sum of its digits eventually becomes a single-digit number, which is 1.
+
+#include <stdio.h>
+
+int isMagicNumber(int num) 
+{
+    while (num > 9) 
+        {
+        int sum = 0;
+        while (num != 0) 
+        {
+            sum += num % 10;
+            num /= 10;
+        }
+        num = sum;
+    }
+    return num == 1;
+}
+
+int main() {
+    int num;
+    
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    
+    if (isMagicNumber(num)) 
+    {
+        printf("%d is a magic number.\n");
+    }
+    else 
+    {
+        printf("%d is not a magic number.\n");
+    }
+    
+    return 0;
+}
+
+
+---------------------------------------------------------
+
+Write C program to print all negative elements in an array.
+
+#include <stdio.h>
+
+int main() 
+{
+    int arr[100]; // Assuming an array of maximum 100 elements
+    int n; // Number of elements in the array
+
+    // Input the number of elements
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    // Input the elements
+    printf("Enter the elements of the array:\n");
+    for (int i = 0; i < n; i++) 
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    // Print negative elements
+    printf("Negative elements in the array are: ");
+    for (int i = 0; i < n; i++) 
+     {
+        if (arr[i] < 0) 
+       {
+            printf("%d ", arr[i]);
+        }
+    }
+    
+    printf("\n");
+
+    return 0;
+}
+
+
+------------------------------------------------------------------------------
+find length of 2D array
+
+#include <stdio.h>
+
+int main()
+{
+
+	int Arr[] = { 1, 2, 3, 4, 5 };
+
+	// variable to store size of Arr
+	int length = sizeof(Arr) / sizeof(Arr[0]);
+
+	printf("The length of the array is: %d\n", length);
+
+	return 0;
+}
+
+
+
+#include <stdio.h>
+
+int main() {
+    int array[3][4];  // Example 2D array with 3 rows and 4 columns
+    int rows, cols;
+
+    // Calculate the number of rows and columns
+    rows = sizeof(array) / sizeof(array[0]);
+    printf("%d\n", rows);
+    cols = sizeof(array[0]) / sizeof(array[0][0]);
+    printf("%d\n", cols);
+
+    printf("Number of rows: %d\n", rows);
+    printf("Number of columns: %d\n", cols);
+
+    return 0;
+}
+
+
+// C Program to calculate size of an array using loop
+#include <stdio.h>
+
+int arr_length(int arr[])
+{
+	int i;
+	int count = 0;
+	for(i=0; arr[i]!='\0'; i++)
+	{
+		count++;
+	}
+	return count;
+}
+
+int main()
+{
+	int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+	int n;
+
+	n = arr_length(arr);
+	printf("Length of Array is: %d", n);
+
+	return 0;
+}
+
+
+---------------------------------------------------------------
+#include <stdio.h>
+
+int main() {
+    int rows, cols;
+
+    printf("Enter the number of rows and columns: ");
+    scanf("%d %d", &rows, &cols);
+
+    if (rows != cols) 
+   {
+        printf("The array must be square for cross-diagonal sum.\n");
+        return 1;
+    }
+
+    int arr[rows][cols];
+
+    printf("Enter the elements of the 2D array:\n");
+    for (int i = 0; i < rows; i++) 
+     {
+        for (int j = 0; j < cols; j++) 
+       {
+            scanf("%d", &arr[i][j]);
+        }
+    }
+
+    int crossDiagonalSum = 0;
+    
+    for (int i = 0; i < rows; i++) 
+    {
+        crossDiagonalSum += arr[i][i];         // Sum along the main diagonal (top-left to bottom-right)
+        crossDiagonalSum += arr[i][cols - i - 1];  // Sum along the other diagonal (top-right to bottom-left)
+    }
+
+    printf("Cross-Diagonal Sum: %d\n", crossDiagonalSum);
+
+    return 0;
+}
+
+----------------------------------------------------------------------------
+
+#include <stdio.h>
+
+int main() 
+{
+    
+    int arr[3] = {7,8,6};
+    int l, sl;
+    
+    for(int i = 0; i < 3; i++) 
+	{
+        if(l < arr[i]) {
+            sl = l;
+            l = arr[i];
+        } else if(l != arr[i] && sl < arr[i])
+		{
+            sl = arr[i];
+        }
+    }
+    
+    printf("Second Largerst: %d \n", sl);
+
+return 0;
+}
+
+--------------------------------------------------------------
+
+Print all negative elements in an array
+
+#include <stdio.h>
+
+int main() {
+    int arr[100];
+    int n;
+
+    // Input the number of elements in the array
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    // Input the elements of the array
+    printf("Enter the elements:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // Print negative elements
+    printf("Negative elements in the array:\n");
+    for (int i = 0; i < n; i++) {
+        if (arr[i] < 0) {
+            printf("%d\n", arr[i]);
+        }
+    }
+
+    return 0;
+}
+
+
+----------------------------------------------------
+
+// C program to find second largest number in an array
+
+
+#include <stdio.h>
+#include <limits.h> // For INT_MIN
+
+#define MAX_SIZE 1000     // Maximum array size 
+
+int main()
+{
+    int arr[MAX_SIZE], size, i;
+    int max1, max2;
+
+    /* Input size of the array */
+    printf("Enter size of the array (1-1000): ");
+    scanf("%d", &size);
+
+    /* Input array elements */ 
+    printf("Enter elements in the array: ");
+    for(i=0; i<size; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    max1 = max2 = INT_MIN;
+
+
+    /*
+     * Check for first largest and second
+     */
+    for(i=0; i<size; i++)
+    {
+        if(arr[i] > max1)
+        {
+            /*
+             * If current element of the array is first largest
+             * then make current max as second max
+             * and then max as current array element
+             */
+            max2 = max1;
+            max1 = arr[i];
+        }
+        else if(arr[i] > max2 && arr[i] < max1)
+        {
+            /*
+             * If current array element is less than first largest
+             * but is greater than second largest then make it
+             * second largest
+             */
+            max2 = arr[i];
+        }
+    }
+
+    printf("First largest = %d\n", max1);
+    printf("Second largest = %d", max2);
+
+    return 0;
+}
+
+
+--------------------------------------------------
+
+// C program to find the frequency of each element in the array
+
+#include <stdio.h>    
+     
+int main()    
+{    
+    //Initialize array     
+    int arr[] = {1, 2, 8, 3, 2, 2, 2, 5, 1};     
+        
+    //Calculate length of array arr    
+    int length = sizeof(arr)/sizeof(arr[0]);    
+        
+    //Array fr will store frequencies of element    
+    int fr[length];    
+    int visited = -1;    
+        
+    for(int i = 0; i < length; i++){    
+        int count = 1;    
+        for(int j = i+1; j < length; j++){    
+            if(arr[i] == arr[j]){    
+                count++;    
+                //To avoid counting same element again    
+                fr[j] = visited;    
+            }    
+        }    
+        if(fr[i] != visited)    
+            fr[i] = count;    
+    }    
+        
+    //Displays the frequency of each element present in array    
+    printf("---------------------\n");    
+    printf(" Element | Frequency\n");    
+    printf("---------------------\n");    
+    for(int i = 0; i < length; i++){    
+        if(fr[i] != visited){    
+            printf("    %d", arr[i]);    
+            printf("    |  ");    
+            printf("  %d\n", fr[i]);    
+        }    
+    }    
+    printf("---------------------\n");    
+    return 0;    
+} 
+
+-----------------------------------------------------
+// C Program To Left Rotate An Array | C Programs
+
+#include <stdio.h>
+#include <conio.h>
+ 
+ 
+int main()
+{
+    int a[10000],i,n,j,k,temp;
+   
+    printf("Enter size of the  array : ");
+    scanf("%d", &n);
+    printf("Enter elements in array : ");
+    for(i=0; i<n; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("how many times left rotate : ");
+    scanf("%d", &k);
+     
+    for(i=0; i<k; i++)
+    {
+        temp=a[0];
+        for(j=0; j<n-1; j++)
+        {
+           a[j]=a[j+1];
+		}
+ 
+         a[n-1]=temp;
+        
+ 
+    }
+    printf("\narray elements after left rotate  : ");
+ 
+    for(i=0; i<n; i++)
+    {
+       printf("%d ",a[i]);
+    }
+    
+ }
+
+-------------------------------------------------- 
+
+// Left Rotation
+
+#include <stdio.h>
+
+// Function to left rotate the array by 'd' positions
+void leftRotate(int arr[], int n, int d) {
+    int temp[d];
+    for (int i = 0; i < d; i++) {
+        temp[i] = arr[i];
+    }
+
+    for (int i = d; i < n; i++) {
+        arr[i - d] = arr[i];
+    }
+
+    for (int i = 0; i < d; i++) {
+        arr[n - d + i] = temp[i];
+    }
+}
+
+// Function to print an array
+void printArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+// Main function
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int d = 2; // Number of positions to rotate
+
+    printf("Original array: ");
+    printArray(arr, n);
+
+    leftRotate(arr, n, d);
+
+    printf("Array after left rotation by %d positions: ", d);
+    printArray(arr, n);
+
+    return 0;
+}
+  
+------------------------------------------
+
+Right Rotation:
+
+#include <stdio.h>
+
+// Function to right rotate the array by 'd' positions
+void rightRotate(int arr[], int n, int d) {
+    int temp[d];
+    for (int i = 0; i < d; i++) {
+        temp[i] = arr[n - d + i];
+    }
+
+    for (int i = n - 1; i >= d; i--) {
+        arr[i] = arr[i - d];
+    }
+
+    for (int i = 0; i < d; i++) {
+        arr[i] = temp[i];
+    }
+}
+
+// Function to print an array
+void printArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+// Main function
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int d = 2; // Number of positions to rotate
+
+    printf("Original array: ");
+    printArray(arr, n);
+
+    rightRotate(arr, n, d);
+
+    printf("Array after right rotation by %d positions: ", d);
+    printArray(arr, n);
+
+    return 0;
+}
+-------------------------------------------------
+Check if a string is a palindrome
+
+#include <stdio.h>
+#include <string.h>
+
+
+int main() 
+{
+    char str[10] = "naman";
+    int i, len, flag = 0;
+    
+    len = strlen(str);
+
+    for (i = 0; i < len; i++) 
+    {
+        // Checking if string is palindrome or not
+        if (str[i] != str[len - i - 1]) 
+        {
+            flag = 1;
+            break;
+        }
+    }
+
+    if (flag)
+        printf("%s is not palindrome", str);
+    else
+        printf("%s is palindrome", str);
+        
+    return 0;
+}
+
+--------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <string.h>
+
+void lowerCase(char str[]){
+  int i = 0;
+  while (str[i] != '\0')
+  {
+    if (str[i] > 64 && str[i] < 91) 
+      str[i] += 32; 
+    i++;
+  }
+}
+int main() 
+{
+    char str[10] = "Naman";
+    int i, len, flag = 0;
+    
+    lowerCase(str);
+    
+    len = strlen(str);
+    
+    // only need to check till half of the array
+    for (i = 0; i < len / 2; i++) 
+    {
+        // Checking if string is palindrome or not.
+        if (str[i] != str[len - i - 1])
+        {
+            flag++;
+            break;
+        }
+    }
+
+    if (flag)
+        printf("String is not palindrome");
+    else
+        printf("String is palindrome");
+        
+    return 0;
+}
+
+----------------------------------------------------
+Program to Find the Transpose of a Matrix
+
+#include <stdio.h>
+
+int main() {
+    int rows, cols;
+    
+    // Taking input for the number of rows and columns
+    printf("Enter the number of rows and columns of the matrix: ");
+    scanf("%d %d", &rows, &cols);
+    
+    int matrix[rows][cols], transpose[cols][rows];
+    
+    // Taking input for the elements of the matrix
+    printf("Enter the elements of the matrix:\n");
+    for (int i = 0; i < rows; i++) 
+{
+        for (int j = 0; j < cols; j++) 
+{
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+    
+    // Computing the transpose of the matrix
+    for (int i = 0; i < rows; i++) 
+{
+        for (int j = 0; j < cols; j++) 
+{
+            transpose[j][i] = matrix[i][j];
+        }
+    }
+    
+    // Printing the transpose of the matrix
+    printf("Transpose of the matrix is:\n");
+    for (int i = 0; i < cols; i++) {
+        for (int j = 0; j < rows; j++) {
+            printf("%d ", transpose[i][j]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+---------------------------------------------------------------------------
+# Define a user-defined function to calculate the cube of a number
+def calculate_cube(number):
+    cube = number ** 3
+    return cube
+
+# Input from the user
+number = float(input("Enter a number: "))
+
+# Call the UDF to calculate the cube
+result = calculate_cube(number)
+
+# Display the result
+print(f"The cube of {number} is {result}")
+
+
+----------------------------------------------------------------------------------------
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char inputString[100], outputString[100];
+    int i, j = 0;
+
+    printf("Enter a string: ");
+    gets(inputString);  // Input the string (Note: gets() is used for simplicity, not recommended for production code)
+
+    for (i = 0; inputString[i] != '\0'; i++) 
+        {
+        if (inputString[i] != ' ' && inputString[i] != '\t') 
+        {
+            outputString[j] = inputString[i];
+            j++;
+        }
+    }
+    outputString[j] = '\0';  // Null-terminate the output string
+
+    printf("String after removing spaces and blanks: %s\n", outputString);
+
+    return 0;
+}
+
+
+---------------------------------------------------------------------------------------------------
+
+C program to find the frequency of characters in a string
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100]; 
+    int freq[256] = {0};
+    int i = 0;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    // Calculate frequency of each character
+    while (str[i] != '\0' && str[i] != '\n') 
+    {
+        freq[(unsigned char)str[i]]++;
+        i++;
+    }
+
+    // Display the frequencies
+
+    printf("Character frequencies:\n");
+    for (i = 0; i < 256; i++) 
+    {
+        if (freq[i] != 0) {
+            printf("'%c' : %d\n", i, freq[i]);
+        }
+    }
+
+    return 0;
+}
+--------------------------------------------------------------------------
+
+Check whether a string is palindrome or not
+
+#include <stdio.h>
+#include <string.h>
+
+
+int main() 
+{
+    char str[10] = "naman";
+    int i, len, flag = 0;
+    
+    len = strlen(str);
+
+    for (i = 0; i < len; i++) 
+    {
+        // Checking if string is palindrome or not
+        if (str[i] != str[len - i - 1]) 
+        {
+            flag = 1;
+            break;
+        }
+    }
+
+    if (flag)
+        printf("%s is not palindrome", str);
+    else
+        printf("%s is palindrome", str);
+        
+    return 0;
+}
+------------------------------------------------------------------------
+Write C program to remove spaces, blanks from a string.
+
+#include <stdio.h>
+
+void removeSpaces(char* str) {
+    int count = 0;
+    for (int i = 0; str[i]; i++) {
+        if (str[i] != ' ')
+            str[count++] = str[i]; // here count is incremented
+    }
+    str[count] = '\0';
+}
+
+int main() {
+    char str[100];
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+    removeSpaces(str);
+
+    printf("String after removing spaces: %s\n", str);
+
+    return 0;
+}
+----------------------------------------------------------------------
+
+
+------------------------------------------------------------------------
+
+Count the frequency of each character in a string:
+
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int frequency[256] = {0};
+
+    printf("Enter a string: ");
+    gets(str);
+
+    for (int i = 0; str[i] != '\0'; i++) 
+    {   
+       
+        frequency[(int)str[i]]++;
+        printf("%c\n" , str[i]);
+        printf("%d\n" , frequency[(int)str[i]]);
+       
+        
+    }
+
+    for (int i = 0; i < 256; i++) 
+    {
+        if (frequency[i] > 0) 
+        {
+            printf("'%c' occurs %d times\n", (char)i, frequency[i]);
+        }
+    }
+
+    return 0;
+}
+
+------------------------------------------------------------------------------------------
+
+Find the sum of all elements in an array by passing the array as an argument using user-defined functions:
+
+#include <stdio.h>
+
+int sumArray(int arr[], int size) 
+    {
+    int sum = 0;
+    for (int i = 0; i < size; i++) 
+    {
+        sum += arr[i];
+    }
+    return sum;
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
+
+    int total = sumArray(arr, size);
+
+    printf("Sum of array elements: %d\n", total);
+
+    return 0;
+}
+
+---------------------------------------------------------------------------------------------
+
+
+Find the length of a string by passing a string or character array as an argument using user-defined functions:
+
+#include <stdio.h>
+
+int stringLength(char str[]) {
+    int length = 0;
+    while (str[length] != '\0') {
+        length++;
+    }
+    return length;
+}
+
+int main() {
+    char str[100];
+
+    printf("Enter a string: ");
+    gets(str);
+
+    int length = stringLength(str);
+
+    printf("Length of the string: %d\n", length);
+
+    return 0;
+}
+
+
+----------------------------------------------------------------------------------------------
+
+#include <stdio.h>
+
+int factorial(int n) {
+    if (n == 0 || n == 1) 
+    {
+        return 1;
+    } 
+
+    else 
+    {
+        return n * factorial(n - 1);
+    }
+}
+
+int main() 
+   {
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num < 0) {
+        printf("Factorial is not defined for negative numbers.\n");
+    } else {
+        int result = factorial(num);
+        printf("Factorial of %d is %d\n", num, result);
+    }
+
+    return 0;
+}
+
+---------------------------------------------------------
+
+
+Count the number of occurrences of a given string in a 2D character array
+
+#include <stdio.h>
+#include <string.h>
+
+int countStringOccurrences(char array[][100], int rows, const char target[]) {
+    int count = 0;
+
+    for (int i = 0; i < rows; i++) {
+        if (strstr(array[i], target) != NULL) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+int main() {
+    char array[5][100] = {
+        "Hello, World!",
+        "This is a test.",
+        "Test string",
+        "Another test string",
+        "Test"
+    };
+
+    char target[100];
+
+    printf("Enter a string to search for: ");
+    gets(target);
+
+    int occurrences = countStringOccurrences(array, 5, target);
+
+    printf("The string '%s' appears %d times in the array.\n", target, occurrences);
+
+    return 0;
+}
+
+
+---------------------------------------------------------------------------------------------
+
+
+Swap two numbers using pointers
+
+
+#include <stdio.h>
+
+void swap(int *a, int *b) 
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() 
+{
+    int num1, num2;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+
+    printf("Before swapping: num1 = %d, num2 = %d\n", num1, num2);
+
+    swap(&num1, &num2);
+
+    printf("After swapping: num1 = %d, num2 = %d\n", num1, num2);
+
+    return 0;
+}
+
+
+--------------------------------------------------------------------------------
+
+
+Input and print array elements using pointers
+
+
+#include <stdio.h>
+
+#define MAX_SIZE 100
+
+int main() 
+{
+    int arr[MAX_SIZE];
+    int n, i;
+
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+
+    printf("Enter %d elements:\n", n);
+    for (i = 0; i < n; i++) 
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("Elements of the array using pointers:\n");
+    int *ptr = arr;
+    for (i = 0; i < n; i++) 
+    {
+        printf("%d ", *(ptr + i));
+    }
+    printf("\n");
+
+    return 0;
+}
+
+
+-------------------------------------------------------
+
+Reverse an array using pointers
+
+#include <stdio.h>
+
+#define MAX_SIZE 100
+
+void reverseArray(int *arr, int size) 
+{
+    int *start = arr;
+    int *end = arr + size - 1;
+    while (start < end) 
+   {
+        int temp = *start;
+        *start = *end;
+        *end = temp;
+        start++;
+        end--;
+    }
+}
+
+int main() 
+    {
+    int arr[MAX_SIZE];
+    int n, i;
+
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+
+    printf("Enter %d elements:\n", n);
+    for (i = 0; i < n; i++) 
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("Array elements before reversing:\n");
+    for (i = 0; i < n; i++) 
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    reverseArray(arr, n);
+
+    printf("Array elements after reversing using pointers:\n");
+    for (i = 0; i < n; i++) 
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+--------------------------------------------------------------------------
+
+Find the length of a string using pointers
+
+#include <stdio.h>
+
+int stringLength(char *str) 
+{
+    int length = 0;
+    while (*str != '\0') 
+    {
+        length++;
+        str++;
+    }
+    return length;
+}
+
+int main() 
+{
+    char inputString[100];
+
+    printf("Enter a string: ");
+    scanf("%s", inputString);
+
+    int length = stringLength(inputString);
+    printf("Length of the string: %d\n", length);
+
+    return 0;
+}
+
+--------------------------------------------------------------------------------------
+
+Program to add two distances in the inch-feet system
+
+#include <stdio.h>
+
+struct Distance 
+{
+   int feet;
+   float inch;
+} d1, d2, result;
+
+int main() {
+   // take first distance input
+   printf("Enter 1st distance\n");
+   printf("Enter feet: ");
+   scanf("%d", &d1.feet);
+   printf("Enter inch: ");
+   scanf("%f", &d1.inch);
+ 
+   // take second distance input
+   printf("\nEnter 2nd distance\n");
+   printf("Enter feet: ");
+   scanf("%d", &d2.feet);
+   printf("Enter inch: ");
+   scanf("%f", &d2.inch);
+   
+   // adding distances
+   result.feet = d1.feet + d2.feet;
+   result.inch = d1.inch + d2.inch;
+
+   // convert inches to feet if greater than 12
+   while (result.inch >= 12.0) 
+   {
+      result.inch = result.inch - 12.0;
+      ++result.feet;
+   }
+   printf("\nSum of distances = %d\'-%.1f\"", result.feet, result.inch);
+   return 0;
+}
+
+
+
+
+
+#include <stdio.h>
+
+typedef struct 
+{
+    int feet;
+    float inch;
+} Distance;
+
+Distance addDistances(Distance d1, Distance d2) {
+    Distance sum;
+    sum.feet = d1.feet + d2.feet;
+    sum.inch = d1.inch + d2.inch;
+
+    // Convert excess inches to feet if greater than or equal to 12
+    while (sum.inch >= 12.0) {
+        sum.inch -= 12.0;
+        sum.feet++;
+    }
+
+    return sum;
+}
+
+int main() {
+    Distance distance1, distance2, result;
+
+    printf("Enter first distance in feet and inches:\n");
+    scanf("%d %f", &distance1.feet, &distance1.inch);
+
+    printf("Enter second distance in feet and inches:\n");
+    scanf("%d %f", &distance2.feet, &distance2.inch);
+
+    result = addDistances(distance1, distance2);
+
+    printf("Total distance: %d feet %.1f inches\n", result.feet, result.inch);
+
+    return 0;
+}
+
+
+
+---------------------------------------
+
+
+
+#include <stdio.h>
+
+typedef enum 
+{
+    SUNDAY = 1,
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY
+} DayOfWeek;
+
+int main() {
+    int dayValue;
+    
+    printf("Enter a number between 1 and 7 to get the day of the week: ");
+    scanf("%d", &dayValue);
+
+    if (dayValue >= SUNDAY && dayValue <= SATURDAY) {
+        printf("The day of the week is ");
+        switch (dayValue) {
+            case SUNDAY:
+                printf("Sunday");
+                break;
+            case MONDAY:
+                printf("Monday");
+                break;
+            case TUESDAY:
+                printf("Tuesday");
+                break;
+            case WEDNESDAY:
+                printf("Wednesday");
+                break;
+            case THURSDAY:
+                printf("Thursday");
+                break;
+            case FRIDAY:
+                printf("Friday");
+                break;
+            case SATURDAY:
+                printf("Saturday");
+                break;
+            default:
+                break;
+        }
+        printf("\n");
+    } else {
+        printf("Invalid input! Please enter a number between 1 and 7.\n");
+    }
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+enum Day 
+{
+    Sunday,
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday
+};
+
+int main() 
+{
+    
+    enum Day weekend1 = Sunday;
+    enum Day weekend2 = Saturday;
+    
+    printf("%d \n%d", weekend1, weekend2);
+    
+    return 0;
+}
+
+-------------------------------------------------------------------
+
+Create a file and write data into the file
+
+#include <stdio.h>
+
+int main() {
+    FILE *filePointer;
+    char data[100];
+
+    filePointer = fopen("example.txt", "w");
+
+    if (filePointer == NULL) 
+    {
+        printf("Unable to create file.\n");
+        return 1;
+    }
+
+    printf("Enter data to write into the file:\n");
+    fgets(data, sizeof(data), stdin);
+
+    fprintf(filePointer, "%s", data);
+    fclose(filePointer);
+
+    printf("Data written to file successfully.\n");
+
+    return 0;
+}
+
+------------------------------------------------------------
+Read a file and display its contents
+
+#include <stdio.h>
+
+int main() 
+{
+    FILE *filePointer;
+    char data[100];
+
+    filePointer = fopen("example.txt", "r");
+
+    if (filePointer == NULL) 
+    {
+        printf("Unable to open file.\n");
+        return 1;
+    }
+
+    printf("Contents of the file:\n");
+    while (fgets(data, sizeof(data), filePointer) != NULL) 
+   {
+        printf("%s", data);
+    }
+
+    fclose(filePointer);
+
+    return 0;
+}
+
+
+
+----------------------------------------------------------------------
+
+Copy contents from one file to another
+
+#include <stdio.h>
+
+int main() {
+    FILE *sourceFile, *destinationFile;
+    char data[100];
+
+    sourceFile = fopen("source.txt", "r");
+    destinationFile = fopen("destination.txt", "w");
+
+    if (sourceFile == NULL || destinationFile == NULL) 
+    {
+        printf("Unable to open files.\n");
+        return 1;
+    }
+
+    while (fgets(data, sizeof(data), sourceFile) != NULL) 
+   {
+        fprintf(destinationFile, "%s", data);
+    }
+
+    printf("Contents copied from source file to destination file.\n");
+
+    fclose(sourceFile);
+    fclose(destinationFile);
+
+    return 0;
+}
+
+
+
+-----------------------------------------------------------------------------
+
+Append data into a file
+
+#include <stdio.h>
+
+int main() 
+   {
+    FILE *filePointer;
+    char data[100];
+
+    filePointer = fopen("example.txt", "a");
+
+    if (filePointer == NULL) 
+    {
+        printf("Unable to open file.\n");
+        return 1;
+    }
+
+    printf("Enter data to append into the file:\n");
+    fgets(data, sizeof(data), stdin);
+
+    fprintf(filePointer, "%s", data);
+    fclose(filePointer);
+
+    printf("Data appended to file successfully.\n");
+
+    return 0;
+}
+
+----------------------------------------------------
+Check Armstrong Number of three digits
+
+#include <stdio.h>
+int main() 
+{
+    int num, originalNum, remainder, result = 0;
+    printf("Enter a three-digit integer: ");
+    scanf("%d", &num);
+    originalNum = num;
+
+    while (originalNum != 0) 
+{
+       // remainder contains the last digit
+        remainder = originalNum % 10;
+        
+       result += remainder * remainder * remainder;
+        
+       // removing last digit from the orignal number
+       originalNum /= 10;
+    }
+
+    if (result == num)
+        printf("%d is an Armstrong number.", num);
+    else
+        printf("%d is not an Armstrong number.", num);
+
+    return 0;
+}
+
+----------------------------------
+
+#include <stdio.h>
+
+int main()
+{
+    int n,i,x,mul=0,a,b,cnt,c,d,y;
+    printf("N = ");
+    scanf("%d",&n);
+    x=n;
+    y=n;
+    while(n!=0)
+    {
+        n=n/10;
+        cnt++;
+    }
+    printf("%d\n" , cnt);
+    while(y!=0)
+    {
+        b=y%10;
+        d=1;
+        i=1;
+        if(y!=0)
+        {
+            while(i<=cnt)
+            {
+                d=d*b;
+                i++;
+            }
+        }
+        mul+=d;
+        y=y/10;
+    }
+    if(x==mul)
+    {
+        printf("\nArmstrong No.\n");
+    }
+    else
+    {
+        printf("\nNot Armstrong No.\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
